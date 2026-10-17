@@ -4,13 +4,13 @@ const translations = {
     heroEyebrow: "FULL-STACK · CLOUD · SERVERLESS",
     heroTitle: 'Engineering products that are <em>fast, secure,</em> and built to scale.',
     heroLead: "I'm Abdurrahman, a Full-Stack Cloud Engineer focused on serverless architecture, AWS infrastructure, and end-to-end product engineering.",
-    viewWork: "Explore selected work", contactMe: "Get in touch", location: "Riyadh, Saudi Arabia", openTo: "Open to technical collaboration",
+    viewWork: "Explore selected work", contactMe: "Get in touch", location: "Riyadh, Saudi Arabia", openTo: "Open to opportunities or technical collaboration",
     securityChip: "Security-minded engineering", coreStack: "CORE TOOLKIT", selectedWork: "SELECTED WORK",
     workTitle: 'Real products.<br><em>Engineering depth.</em>',
     workIntro: "A selection of product work across commerce, real-time social experiences, and SaaS. Details and access can be discussed during a technical walkthrough.",
     illustrativeUi: "ILLUSTRATIVE UI CONCEPT", commerceVisualTitle: 'A considered<br><em>commerce experience.</em>', visualCta: "Explore collection",
     commerceCategory: "E-COMMERCE · SERVERLESS", liveProject: "Live project",
-    commerceDesc: "A production serverless e-commerce platform for a family project, built from scratch on AWS with a catalog of dozens of products. It features passwordless sign-in (SMS and email OTP), defense-in-depth security, and CloudWatch-verified 4–6 ms response times at near $3/month in infrastructure. It also repelled a targeted Layer 7 DDoS attack with no customer data exposed.",
+    commerceDesc: "A production serverless e-commerce platform for a family project, built from scratch on AWS. It features passwordless sign-in (SMS and email OTP), CloudWatch-verified 4–6 ms response times, and near $3/month in infrastructure. Its defense-in-depth design has repelled real attacks in production: access-bypass attempts, malicious file uploads, and sensitive-file scanning.",
     visitLive: "Visit live store", sourceOnRequest: "Source walkthrough available on request",
     socialCategory: "SOCIAL · REAL-TIME",
     socialDesc: "A full-stack social platform built end to end on the MERN stack: real-time messaging over Socket.io with voice recording, a media-rich Reels feature, and JWT-based authentication. Smart search is hardened against SQL/NoSQL injection.",
@@ -33,27 +33,28 @@ const translations = {
     contactEyebrow: "LET'S TALK ENGINEERING", contactTitle: 'Have a meaningful problem<br>to <em>solve together?</em>',
     contactDesc: "Open to discussing technical architecture, product development, and technical partnership opportunities.",
     emailMe: "Email me", footerRights: "Built with care.", footerEmail: "Email",
-    githubAdd: "GitHub", linkedinAdd: "LinkedIn",
+    githubAdd: "GitHub", linkedinAdd: "LinkedIn", socialStatus: "Learning project",
     languageLabel: "العربية", languageAria: "Switch language to Arabic", menuOpen: "Open menu", menuClose: "Close menu",
-    almuhannadTitle: "Al-Muhannad Sweets & Herbs",
-    metricLatency: "Verified response time", metricCost: "Monthly infrastructure", metricSecurity: "Attack repelled",
+    almuhannadTitle: "Al-Muhannad Sweets & Herbs", metricSecurity: "Repelled in production",
+    metricLatency: "Verified response time", metricCost: "Monthly infrastructure", metricAttacks: "3 attack types",
+    tagAccessBypass: "Access-bypass protection", tagUploadDefense: "Malicious-upload defense", tagFileScan: "Sensitive-file scan blocking"
   },
   ar: {
     navWork: "المشاريع", navExpertise: "الخبرات", navAbout: "نبذة عني", navContact: "تواصل معي ↗",
     heroEyebrow: "تطوير شامل · سحابة · Serverless",
     heroTitle: 'أبني منتجات <em>سريعة وآمنة</em> ومهيأة للنمو.',
-    heroLead: "أنا عبد الرحمن، مهندس برمجيات Full-Stack وسحابة، أركز على المعمارية عديمة الخوادم، وبنية AWS التحتية، وتطوير المنتجات من البداية إلى الإنتاج.",
-    viewWork: "استعرض أعمالي", contactMe: "لنتواصل", location: "الرياض، المملكة العربية السعودية", openTo: "منفتح على التعاون التقني",
+    heroLead: "أنا عبد الرحمن، مهندس برمجيات Full-Stack وسحابة، أركز على المعمارية عديمة الخوادم (Serverless)، وبنية AWS التحتية، وتطوير المنتجات من البداية إلى الإنتاج.",
+    viewWork: "استعرض أعمالي", contactMe: "لنتواصل", location: "الرياض، المملكة العربية السعودية", openTo: "منفتح على الفرص أو التعاون التقني",
     securityChip: "هندسة تضع الأمان أولًا", coreStack: "التقنيات الأساسية", selectedWork: "نماذج من أعمالي",
     workTitle: 'منتجات حقيقية.<br><em>وعمق هندسي.</em>',
     workIntro: "مجموعة من المشاريع في التجارة الإلكترونية، والتواصل الفوري، ومنتجات SaaS. يمكن مناقشة التفاصيل واستعراض التنفيذ خلال لقاء تقني.",
     illustrativeUi: "تصميم توضيحي للواجهة", commerceVisualTitle: 'تجربة تسوّق<br><em>مدروسة التفاصيل.</em>', visualCta: "استكشف المنتجات",
     commerceCategory: "تجارة إلكترونية · Serverless", liveProject: "مشروع حي",
-    commerceDesc: "منصة تجارة إلكترونية إنتاجية بمعمارية Serverless كاملة لمشروع عائلي، بنيتها من الصفر على AWS وتخدم عشرات المنتجات. تعتمد دخولًا بدون كلمة سر (OTP عبر SMS والبريد)، وأمانًا متعدد الطبقات، وزمن استجابة 4–6 ms موثقًا عبر CloudWatch بتكلفة بنية تحتية حوالي 3$ شهريًا. وقد صدّت هجوم DDoS مستهدفًا على المستوى السابع دون تسرب أي بيانات عملاء.",
-    visitLive: "زيارة المتجر الفعلي", sourceOnRequest: "يمكن استعراض الشيفرة عند الطلب",
+    commerceDesc: "منصة تجارة إلكترونية إنتاجية بمعمارية Serverless كاملة لمشروع عائلي، بنيتها من الصفر على AWS. تعتمد دخولًا بدون كلمة سر (OTP عبر SMS والبريد)، وزمن استجابة 4–6 ms موثقًا عبر CloudWatch، وبنية تحتية بتكلفة حوالي 3$ شهريًا. وقد صدّت بنيتها الأمنية متعددة الطبقات هجمات حقيقية في بيئة الإنتاج: محاولات تجاوز الصلاحيات، ورفع ملفات خبيثة، ومسح الملفات الحساسة.",
+    visitLive: "زيارة المتجر الفعلي", sourceOnRequest: "يمكن استعراض الكود عند الطلب",
     socialCategory: "شبكات اجتماعية · لحظي",
     socialDesc: "منصة تواصل اجتماعي متكاملة بنيتها من الواجهة إلى الخلفية بمجموعة MERN: مراسلة فورية عبر Socket.io مع تسجيل صوتي، ومقاطع Reels غنية بالوسائط، ومصادقة JWT. والبحث الذكي محميّ ضد هجمات حقن SQL/NoSQL.",
-    sourceAvailable: "الشيفرة متاحة للمراجعة", linkPending: "معاينة المستودع",
+    sourceAvailable: "الكود متاح للمراجعة", linkPending: "معاينة المستودع",
     saasCategory: "SaaS · معالجة غير متزامنة", inDevelopment: "قيد التطوير",
     saasDesc: "منصة SaaS لمعالجة ملفات PDF والوسائط قيد التطوير. أصمّم مسارات معالجة غير متزامنة للعمليات الثقيلة، وأخطّط للاشتراكات والفوترة، وأدمج Google Ads API.",
     processingPipeline: "مسار معالجة غير متزامن", architectureDiscussion: "مرحبًا بمناقشة المعمارية", inProgress: "العمل مستمر",
@@ -72,10 +73,11 @@ const translations = {
     contactEyebrow: "لنتحدث في التقنية", contactTitle: 'هل لديك تحدٍ حقيقي<br>لنحاول <em>حلّه معًا؟</em>',
     contactDesc: "منفتح على مناقشة المعمارية التقنية، وتطوير المنتجات، وفرص الشراكة التقنية.",
     emailMe: "راسلني", footerRights: "صُنع بعناية.", footerEmail: "البريد الإلكتروني",
-    githubAdd: "GitHub", linkedinAdd: "LinkedIn",
+    githubAdd: "GitHub", linkedinAdd: "LinkedIn", socialStatus: "مشروع تعليمي",
     languageLabel: "English", languageAria: "تغيير اللغة إلى الإنجليزية", menuOpen: "فتح القائمة", menuClose: "إغلاق القائمة",
-    almuhannadTitle: "حلويات وعطارة المهند",
-    metricLatency: "زمن استجابة موثّق", metricCost: "تكلفة البنية شهريًا", metricSecurity: "هجوم تم صدّه",
+    almuhannadTitle: "حلويات وعطارة المهند", metricSecurity: "صُدّت فعليًا", metricAttacks: "3 أنواع من الهجمات",
+    metricLatency: "زمن استجابة موثّق", metricCost: "تكلفة البنية شهريًا",
+    tagAccessBypass: "منع تجاوز الصلاحيات", tagUploadDefense: "صدّ الرفع الخبيث", tagFileScan: "منع مسح الملفات الحساسة"
   }
 };
 
@@ -91,8 +93,8 @@ function setLanguage(lang) {
   html.dir = lang === "ar" ? "rtl" : "ltr";
   document.body.dir = html.dir;
   document.title = lang === "ar"
-    ? "عبد الرحمن بارودي — مهندس برمجيات وسحابة"
-    : "Abdurrahman Baroudi — Full-Stack Cloud Engineer";
+    ? "عبدالرحمن بارودي - مهندس برمجيات وسحابة"
+    : "Abdurrahman Baroudi - Full-Stack Cloud Engineer";
 
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;

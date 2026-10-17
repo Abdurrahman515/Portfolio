@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- خلفية داكنة أنيقة تناسب طابع المطورين -->
+  <rect width="32" height="32" rx="7" fill="#090d16" />
+  
+  <!-- الحروف AB مع النقطة الخضراء المائلة للأصفر -->
+  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif" font-weight="800" font-size="13.5" letter-spacing="-0.5" fill="#ffffff">
+    AB<tspan fill="#84cc16" font-weight="900">.</tspan>
+  </text>
+</svg>
