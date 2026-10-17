@@ -10,13 +10,13 @@ const translations = {
     workIntro: "A selection of product work across commerce, real-time social experiences, and SaaS. Details and access can be discussed during a technical walkthrough.",
     illustrativeUi: "ILLUSTRATIVE UI CONCEPT", commerceVisualTitle: 'A considered<br><em>commerce experience.</em>', visualCta: "Explore collection",
     commerceCategory: "E-COMMERCE · SERVERLESS", liveProject: "Live project",
-    commerceDesc: "A serverless e-commerce platform built with a focus on secure authentication, cost-aware infrastructure, and a responsive storefront.",
+    commerceDesc: "A production serverless e-commerce platform for a family project, built from scratch on AWS with a catalog of dozens of products. It features passwordless sign-in (SMS and email OTP), defense-in-depth security, and CloudWatch-verified 4–6 ms response times at near $3/month in infrastructure. It also repelled a targeted Layer 7 DDoS attack with no customer data exposed.",
     visitLive: "Visit live store", sourceOnRequest: "Source walkthrough available on request",
     socialCategory: "SOCIAL · REAL-TIME",
-    socialDesc: "A social networking platform featuring real-time messaging, voice recording, media-rich Reels, and protected smart search.",
+    socialDesc: "A full-stack social platform built end to end on the MERN stack: real-time messaging over Socket.io with voice recording, a media-rich Reels feature, and JWT-based authentication. Smart search is hardened against SQL/NoSQL injection.",
     sourceAvailable: "Source code available for review", linkPending: "View Repository",
     saasCategory: "SAAS · ASYNC PROCESSING", inDevelopment: "In development",
-    saasDesc: "A PDF and media processing SaaS in development, with asynchronous workload pipelines, subscription billing, and Google Ads API integration planning.",
+    saasDesc: "A PDF and media processing SaaS currently in development. I'm architecting asynchronous pipelines for heavy file operations, designing subscription billing, and integrating the Google Ads API.",
     processingPipeline: "Async processing pipeline", architectureDiscussion: "Architecture discussion welcome", inProgress: "Work in progress",
     disclaimer: "The CrazyEdit and ShareX visual is an original illustrative concept, not a screenshot.",
     commerceImgAlt: "Al Muhannad store screenshot", socialImgAlt1: "ShareX app screenshot 1", socialImgAlt2: "ShareX app screenshot 2",
@@ -35,7 +35,8 @@ const translations = {
     emailMe: "Email me", footerRights: "Built with care.", footerEmail: "Email",
     githubAdd: "GitHub", linkedinAdd: "LinkedIn",
     languageLabel: "العربية", languageAria: "Switch language to Arabic", menuOpen: "Open menu", menuClose: "Close menu",
-    almuhannadTitle: "Al-Muhannad Sweets & Herbs"
+    almuhannadTitle: "Al-Muhannad Sweets & Herbs",
+    metricLatency: "Verified response time", metricCost: "Monthly infrastructure", metricSecurity: "Attack repelled",
   },
   ar: {
     navWork: "المشاريع", navExpertise: "الخبرات", navAbout: "نبذة عني", navContact: "تواصل معي ↗",
@@ -48,13 +49,13 @@ const translations = {
     workIntro: "مجموعة من المشاريع في التجارة الإلكترونية، والتواصل الفوري، ومنتجات SaaS. يمكن مناقشة التفاصيل واستعراض التنفيذ خلال لقاء تقني.",
     illustrativeUi: "تصميم توضيحي للواجهة", commerceVisualTitle: 'تجربة تسوّق<br><em>مدروسة التفاصيل.</em>', visualCta: "استكشف المنتجات",
     commerceCategory: "تجارة إلكترونية · Serverless", liveProject: "مشروع حي",
-    commerceDesc: "منصة تجارة إلكترونية بمعمارية Serverless، مع التركيز على المصادقة الآمنة، وضبط تكاليف البنية التحتية، وتجربة استخدام متجاوبة.",
+    commerceDesc: "منصة تجارة إلكترونية إنتاجية بمعمارية Serverless كاملة لمشروع عائلي، بنيتها من الصفر على AWS وتخدم عشرات المنتجات. تعتمد دخولًا بدون كلمة سر (OTP عبر SMS والبريد)، وأمانًا متعدد الطبقات، وزمن استجابة 4–6 ms موثقًا عبر CloudWatch بتكلفة بنية تحتية حوالي 3$ شهريًا. وقد صدّت هجوم DDoS مستهدفًا على المستوى السابع دون تسرب أي بيانات عملاء.",
     visitLive: "زيارة المتجر الفعلي", sourceOnRequest: "يمكن استعراض الشيفرة عند الطلب",
     socialCategory: "شبكات اجتماعية · لحظي",
-    socialDesc: "منصة تواصل اجتماعي تتضمن مراسلة فورية، وتسجيلًا صوتيًا، ومقاطع Reels غنية بالوسائط، وبحثًا ذكيًا محميًا.",
+    socialDesc: "منصة تواصل اجتماعي متكاملة بنيتها من الواجهة إلى الخلفية بمجموعة MERN: مراسلة فورية عبر Socket.io مع تسجيل صوتي، ومقاطع Reels غنية بالوسائط، ومصادقة JWT. والبحث الذكي محميّ ضد هجمات حقن SQL/NoSQL.",
     sourceAvailable: "الشيفرة متاحة للمراجعة", linkPending: "معاينة المستودع",
     saasCategory: "SaaS · معالجة غير متزامنة", inDevelopment: "قيد التطوير",
-    saasDesc: "منصة SaaS لمعالجة ملفات PDF والوسائط قيد التطوير، مع مسارات معالجة غير متزامنة، وتخطيط للاشتراكات، وتكامل Google Ads API.",
+    saasDesc: "منصة SaaS لمعالجة ملفات PDF والوسائط قيد التطوير. أصمّم مسارات معالجة غير متزامنة للعمليات الثقيلة، وأخطّط للاشتراكات والفوترة، وأدمج Google Ads API.",
     processingPipeline: "مسار معالجة غير متزامن", architectureDiscussion: "مرحبًا بمناقشة المعمارية", inProgress: "العمل مستمر",
     disclaimer: "رسم CrazyEdit و ShareX تصميم توضيحي أُنشئ لهذا المعرض وليس لقطة شاشة.",
     commerceImgAlt: "لقطة شاشة من متجر المهنّد", socialImgAlt1: "لقطة شاشة 1 من تطبيق ShareX", socialImgAlt2: "لقطة شاشة 2 من تطبيق ShareX",
@@ -73,7 +74,8 @@ const translations = {
     emailMe: "راسلني", footerRights: "صُنع بعناية.", footerEmail: "البريد الإلكتروني",
     githubAdd: "GitHub", linkedinAdd: "LinkedIn",
     languageLabel: "English", languageAria: "تغيير اللغة إلى الإنجليزية", menuOpen: "فتح القائمة", menuClose: "إغلاق القائمة",
-    almuhannadTitle: "حلويات وعطارة المهند"
+    almuhannadTitle: "حلويات وعطارة المهند",
+    metricLatency: "زمن استجابة موثّق", metricCost: "تكلفة البنية شهريًا", metricSecurity: "هجوم تم صدّه",
   }
 };
 

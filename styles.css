@@ -29,3 +29,9 @@ html[dir="rtl"] .hero h1,html[dir="rtl"] .section-heading h2,html[dir="rtl"] .ap
 /* ShareX: two screenshots side by side */
 .project-art.shot-pair{display:flex;align-items:stretch;justify-content:center;gap:14px;padding:16px}
 .project-art.shot-pair .project-shot{position:static;inset:auto;flex:1 1 0;width:0;min-width:0;height:auto;object-fit:contain;padding:0;border-radius:10px}
+
+.project-metrics{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:14px 0 4px;padding:0}
+.project-metrics li{flex:1 1 90px;border:1px solid #252d39;border-radius:8px;padding:10px 12px;background:#0a0e14}
+.project-metrics b{display:block;font-size:17px;color:#e9eef5}
+.project-metrics span{display:block;margin-top:3px;font:9px var(--mono);letter-spacing:1px;color:#a4b0bd;text-transform:uppercase}
+html[dir="rtl"] .project-metrics span{letter-spacing:0}
