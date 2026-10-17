@@ -34,7 +34,8 @@ const translations = {
     contactDesc: "Open to discussing technical architecture, product development, and technical partnership opportunities.",
     emailMe: "Email me", footerRights: "Built with care.", footerEmail: "Email",
     githubAdd: "GitHub", linkedinAdd: "LinkedIn",
-    languageLabel: "العربية", languageAria: "Switch language to Arabic", menuOpen: "Open menu", menuClose: "Close menu"
+    languageLabel: "العربية", languageAria: "Switch language to Arabic", menuOpen: "Open menu", menuClose: "Close menu",
+    almuhannadTitle: "Al-Muhannad Sweets & Herbs"
   },
   ar: {
     navWork: "المشاريع", navExpertise: "الخبرات", navAbout: "نبذة عني", navContact: "تواصل معي ↗",
@@ -71,7 +72,8 @@ const translations = {
     contactDesc: "منفتح على مناقشة المعمارية التقنية، وتطوير المنتجات، وفرص الشراكة التقنية.",
     emailMe: "راسلني", footerRights: "صُنع بعناية.", footerEmail: "البريد الإلكتروني",
     githubAdd: "GitHub", linkedinAdd: "LinkedIn",
-    languageLabel: "English", languageAria: "تغيير اللغة إلى الإنجليزية", menuOpen: "فتح القائمة", menuClose: "إغلاق القائمة"
+    languageLabel: "English", languageAria: "تغيير اللغة إلى الإنجليزية", menuOpen: "فتح القائمة", menuClose: "إغلاق القائمة",
+    almuhannadTitle: "حلويات وعطارة المهند"
   }
 };
 
