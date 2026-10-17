@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b10">
+  <meta name="description" content="Abdurrahman Kurban Baroudi — Full-Stack Cloud Engineer specializing in serverless architecture, AWS, and secure web applications.">
+  <title>Abdurrahman Baroudi — Full-Stack Cloud Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header wrap">
+      <a class="brand" href="#home" aria-label="AB home">AB<span>.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#work" data-i18n="navWork">Projects</a>
+        <a href="#expertise" data-i18n="navExpertise">Expertise</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a class="nav-contact" href="#contact" data-i18n="navContact">Contact ↗</a>
+      </nav>
+      <button class="language-toggle" id="languageToggle" type="button" aria-label="Switch language">
+        <span class="lang-globe">文</span><span id="languageLabel">العربية</span>
+      </button>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero wrap" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span><span data-i18n="heroEyebrow">FULL-STACK · CLOUD · SERVERLESS</span></p>
+          <h1 data-i18n-html="heroTitle">Engineering products that are <em>fast, secure,</em> and built to scale.</h1>
+          <p class="hero-lead" data-i18n="heroLead">I'm Abdurrahman, a Full-Stack Cloud Engineer focused on serverless architecture, AWS infrastructure, and end-to-end product engineering.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work"><span data-i18n="viewWork">Explore selected work</span><span class="button-arrow" aria-hidden="true">↘</span></a>
+            <a class="button button-quiet" href="mailto:karbanbaroudia@gmail.com"><span data-i18n="contactMe">Get in touch</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta">
+            <span><i class="meta-pin"></i><span data-i18n="location">Riyadh, Saudi Arabia</span></span>
+            <span><i class="meta-check">↗</i><span data-i18n="openTo">Open to technical collaboration</span></span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Abstract code and architecture illustration">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="floating-chip chip-top"><span class="chip-led"></span> <span>AWS / SERVERLESS</span></div>
+          <div class="code-window">
+            <div class="window-head"><div class="window-dots"><i></i><i></i><i></i></div><span>architecture.ts</span><span class="window-more">···</span></div>
+            <div class="code-body">
+              <p><span class="line-no">01</span><span class="code-purple">const</span> system = {</p>
+              <p><span class="line-no">02</span>&nbsp; security: <span class="code-green">"by design"</span>,</p>
+              <p><span class="line-no">03</span>&nbsp; compute: <span class="code-green">"serverless"</span>,</p>
+              <p><span class="line-no">04</span>&nbsp; cost: <span class="code-green">"measured"</span>,</p>
+              <p><span class="line-no">05</span>&nbsp; delivery: <span class="code-green">"production"</span></p>
+              <p><span class="line-no">06</span>};</p>
+              <p class="code-comment"><span class="line-no">07</span>// Thoughtful trade-offs. Observable results.</p>
+              <p><span class="line-no">08</span><span class="code-purple">await</span> ship(system);<span class="cursor"></span></p>
+            </div>
+            <div class="code-footer"><span><i></i> Architecture first</span><span>TS&nbsp; 5.x</span></div>
+          </div>
+          <div class="floating-chip chip-bottom"><span class="shield-icon">◇</span><span data-i18n="securityChip">Security-minded engineering</span></div>
+          <div class="art-glow"></div>
+        </div>
+      </section>
+
+      <section class="tech-ribbon" aria-label="Core technologies">
+        <div class="wrap ribbon-content">
+          <span class="ribbon-label" data-i18n="coreStack">CORE TOOLKIT</span>
+          <div class="ribbon-list"><span>Next.js</span><b>·</b><span>TypeScript</span><b>·</b><span>AWS Lambda</span><b>·</b><span>DynamoDB</span><b>·</b><span>Node.js</span><b>·</b><span>Cloud Security</span></div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="work">
+        <div class="section-heading">
+          <div><p class="eyebrow" data-i18n="selectedWork">SELECTED WORK</p><h2 data-i18n-html="workTitle">Real products.<br><em>Engineering depth.</em></h2></div>
+          <p class="section-intro" data-i18n="workIntro">A selection of product work across commerce, real-time social experiences, and SaaS. Details and access can be discussed during a technical walkthrough.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-featured">
+            <div class="project-art has-shot">
+              <img class="project-shot" src="images/almuhannad.png" alt="Al Muhannad store screenshot" data-i18n-alt="commerceImgAlt" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span class="project-number">01</span><span class="project-category" data-i18n="commerceCategory">E-COMMERCE · SERVERLESS</span><span class="project-live"><i></i><span data-i18n="liveProject">Live project</span></span></div>
+              <h3>Al-Muhannad Sweets & Herbs</h3>
+              <p data-i18n="commerceDesc">A serverless e-commerce platform built with a focus on secure authentication, cost-aware infrastructure, and a responsive storefront.</p>
+              <div class="tag-list"><span>Next.js</span><span>AWS SST</span><span>DynamoDB</span><span>CloudFront</span><span>Lambda</span></div>
+              <div class="project-bottom"><a class="project-link" href="https://almuhannad-sweets-herbs.com/ar" target="_blank" rel="noopener noreferrer"><span data-i18n="visitLive">Visit live store</span><b>↗</b></a><span class="source-note" data-i18n="sourceOnRequest">Source walkthrough available on request</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art has-shot shot-contain social-art">
+              <img class="project-shot" src="images/sharex.jpg" alt="ShareX app screenshot" data-i18n-alt="socialImgAlt" loading="lazy" decoding="async">
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span class="project-number">02</span><span class="project-category" data-i18n="socialCategory">SOCIAL · REAL-TIME</span></div>
+              <h3>ShareX</h3>
+              <p data-i18n="socialDesc">A social networking platform featuring real-time messaging, voice recording, media-rich Reels, and protected smart search.</p>
+              <div class="tag-list"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Socket.io</span><span>JWT</span></div>
+              <div class="project-bottom"><span class="source-note" data-i18n="sourceAvailable">Source code available for review</span><span class="link-unavailable"><a data-i18n="linkPending" target="_blank" href="https://github.com/Abdurrahman515/ShareX"></a></span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art saas-art">
+              <div class="pipeline-ui"><div class="pipeline-head"><span class="pipeline-logo">C</span><div><b>CrazyEdit</b><small>MEDIA WORKFLOW</small></div><span class="pipeline-menu">···</span></div><div class="pipeline-stage"><span class="stage-node">PDF</span><span class="stage-line"></span><span class="stage-node stage-ai">✳</span><span class="stage-line"></span><span class="stage-node stage-export">↗</span></div><div class="pipeline-progress"><span></span></div><div class="pipeline-caption"><span data-i18n="processingPipeline">Async processing pipeline</span><span>68%</span></div></div>
+              <span class="art-index">03 / SAAS</span>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span class="project-number">03</span><span class="project-category" data-i18n="saasCategory">SAAS · ASYNC PROCESSING</span><span class="project-progress"><i></i><span data-i18n="inDevelopment">In development</span></span></div>
+              <h3>CrazyEdit</h3>
+              <p data-i18n="saasDesc">A PDF and media processing SaaS in development, with asynchronous workload pipelines, subscription billing, and Google Ads API integration planning.</p>
+              <div class="tag-list"><span>Next.js</span><span>Node.js</span><span>AWS</span><span>Google Ads API</span></div>
+              <div class="project-bottom"><span class="source-note" data-i18n="architectureDiscussion">Architecture discussion welcome</span><span class="link-unavailable" data-i18n="inProgress">Work in progress</span></div>
+            </div>
+          </article>
+        </div>
+        <p class="portfolio-disclaimer"><span>ⓘ</span><span data-i18n="disclaimer">The CrazyEdit visual is an original illustrative concept, not a screenshot, as the product is still in development.</span></p>
+      </section>
+
+      <section class="approach-section" id="expertise">
+        <div class="wrap approach-layout">
+          <div class="approach-intro"><p class="eyebrow" data-i18n="engineeringPrinciples">ENGINEERING PRINCIPLES</p><h2 data-i18n-html="approachTitle">Good engineering is more than <em>shipping code.</em></h2><p data-i18n="approachDesc">I approach software as a complete system: security boundaries, operational visibility, scaling behavior, and cost all matter.</p></div>
+          <div class="principle-list">
+            <article><span class="principle-num">01</span><div><h3 data-i18n="principle1Title">Defense in depth</h3><p data-i18n="principle1Desc">Layered security controls, least-privilege access, and careful secrets management.</p></div><span class="principle-icon">⌘</span></article>
+            <article><span class="principle-num">02</span><div><h3 data-i18n="principle2Title">Cost-aware architecture</h3><p data-i18n="principle2Desc">Select managed services and serverless patterns based on the workload—not hype.</p></div><span class="principle-icon">⌁</span></article>
+            <article><span class="principle-num">03</span><div><h3 data-i18n="principle3Title">Observable delivery</h3><p data-i18n="principle3Desc">Tests, logs, and metrics that help validate behavior and diagnose regressions.</p></div><span class="principle-icon">↗</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section wrap" id="about">
+        <div class="section-heading skills-heading"><div><p class="eyebrow" data-i18n="toolkitLabel">TECHNICAL TOOLKIT</p><h2 data-i18n-html="skillsTitle">From interface to <em>infrastructure.</em></h2></div><p class="section-intro" data-i18n="skillsIntro">A practical toolkit spanning frontend, backend, data, cloud, and quality engineering.</p></div>
+        <div class="skills-grid">
+          <article><span class="skill-icon">◫</span><h3 data-i18n="skillFrontend">Frontend</h3><p>JavaScript · TypeScript · React · Next.js · HTML5 · CSS3 · Tailwind CSS</p></article>
+          <article><span class="skill-icon">⌘</span><h3 data-i18n="skillBackend">Backend & APIs</h3><p>Node.js · Express · REST APIs · Socket.io · JWT · Auth.js</p></article>
+          <article><span class="skill-icon">◈</span><h3 data-i18n="skillData">Data & modeling</h3><p>MongoDB · Mongoose · DynamoDB · Data modeling</p></article>
+          <article><span class="skill-icon">☁</span><h3 data-i18n="skillCloud">Cloud & security</h3><p>AWS Lambda · S3 · CloudFront · SSM Parameter Store · CloudWatch · SST · Cloudflare WAF</p></article>
+          <article><span class="skill-icon">✓</span><h3 data-i18n="skillQuality">Quality & tooling</h3><p>Jest · Supertest · Git · GitHub · Testing · Clean architecture</p></article>
+          <article><span class="skill-icon">文</span><h3 data-i18n="skillLanguages">Languages</h3><p data-i18n="languagesList">Arabic — Native · English — Professional · Turkish — Fluent</p></article>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="wrap contact-panel"><div class="contact-orb"></div><div class="contact-copy"><p class="eyebrow" data-i18n="contactEyebrow">LET'S TALK ENGINEERING</p><h2 data-i18n-html="contactTitle">Have a meaningful problem<br>to <em>solve together?</em></h2><p data-i18n="contactDesc">Open to discussing technical architecture, product development, and technical partnership opportunities.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:karbanbaroudia@gmail.com"><span data-i18n="emailMe">Email me</span><span>↗</span></a><a class="phone-link" href="tel:+966579230153" dir="ltr">+966 57 923 0153</a></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap">
+      <a class="brand" href="#home">AB<span>.</span></a>
+      <p>© <span id="year"></span> Abdurrahman Kurban Baroudi. <span data-i18n="footerRights">Built with care.</span></p>
+      <div class="footer-links"><a href="mailto:karbanbaroudia@gmail.com" data-i18n="footerEmail">Email</a><span class="footer-placeholder"><a href="https://github.com/Abdurrahman515" data-i18n="githubAdd" target="_blank"></a></span><span class="footer-placeholder"><a data-i18n="linkedinAdd" href="https://linkedin.com/in/abdurrahman-barudi" target="_blank"></a></span></div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
