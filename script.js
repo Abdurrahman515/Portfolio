@@ -37,7 +37,10 @@ const translations = {
     languageLabel: "العربية", languageAria: "Switch language to Arabic", menuOpen: "Open menu", menuClose: "Close menu",
     almuhannadTitle: "Al-Muhannad Sweets & Herbs", metricSecurity: "Repelled in production",
     metricLatency: "Verified response time", metricCost: "Monthly infrastructure", metricAttacks: "3 attack types",
-    tagAccessBypass: "Access-bypass protection", tagUploadDefense: "Malicious-upload defense", tagFileScan: "Sensitive-file scan blocking"
+    tagAccessBypass: "Access-bypass protection", tagUploadDefense: "Malicious-upload defense", tagFileScan: "Sensitive-file scan blocking",
+    contactMenuTitle: "Get in touch", contactEmail: "Email", contactWhatsapp: "WhatsApp", contactLinkedin: "LinkedIn",
+    contactCopy: "Copy email address", contactCopied: "Copied ✓",
+    waMessage: "Hello Abdurrahman, I came across your portfolio and would like to talk about:"
   },
   ar: {
     navWork: "المشاريع", navExpertise: "الخبرات", navAbout: "نبذة عني", navContact: "تواصل معي ↗",
@@ -77,7 +80,10 @@ const translations = {
     languageLabel: "English", languageAria: "تغيير اللغة إلى الإنجليزية", menuOpen: "فتح القائمة", menuClose: "إغلاق القائمة",
     almuhannadTitle: "حلويات وعطارة المهند", metricSecurity: "صُدّت فعليًا", metricAttacks: "3 أنواع من الهجمات",
     metricLatency: "زمن استجابة موثّق", metricCost: "تكلفة البنية شهريًا",
-    tagAccessBypass: "منع تجاوز الصلاحيات", tagUploadDefense: "صدّ الرفع الخبيث", tagFileScan: "منع مسح الملفات الحساسة"
+    tagAccessBypass: "منع تجاوز الصلاحيات", tagUploadDefense: "صدّ الرفع الخبيث", tagFileScan: "منع مسح الملفات الحساسة",
+    contactMenuTitle: "تواصل معي", contactEmail: "البريد الإلكتروني", contactWhatsapp: "واتساب", contactLinkedin: "لينكدإن",
+    contactCopy: "نسخ البريد الإلكتروني", contactCopied: "تم النسخ ✓",
+    waMessage: "السلام عليكم عبد الرحمن، اطلعت على موقعك وأرغب في التواصل معك عن:"
   }
 };
 
@@ -86,6 +92,13 @@ const languageToggle = document.getElementById("languageToggle");
 const languageLabel = document.getElementById("languageLabel");
 const menuToggle = document.getElementById("mobileMenuToggle");
 const nav = document.querySelector(".main-nav");
+
+const contactMenu = document.getElementById("contactMenu");
+const contactBackdrop = document.getElementById("contactBackdrop");
+const copyEmailBtn = document.getElementById("copyEmail");
+const contactTriggers = document.querySelectorAll("[data-contact-toggle]");
+let activeTrigger = null;
+let copyTimer = null;
 
 function setLanguage(lang) {
   const dictionary = translations[lang] || translations.en;
@@ -108,6 +121,11 @@ function setLanguage(lang) {
     const key = element.dataset.i18nAlt;
     if (dictionary[key] !== undefined) element.alt = dictionary[key];
   });
+
+  const waUrl = "https://wa.me/966579230153?text=" + encodeURIComponent(dictionary.waMessage);
+  document.querySelectorAll("[data-wa]").forEach((a) => { a.href = waUrl; });
+  contactMenu.setAttribute("aria-label", dictionary.contactMenuTitle);
+
   languageLabel.textContent = dictionary.languageLabel;
   languageToggle.setAttribute("aria-label", dictionary.languageAria);
   menuToggle.setAttribute("aria-label", nav.classList.contains("is-open") ? dictionary.menuClose : dictionary.menuOpen);
@@ -139,5 +157,58 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 640) {
     nav.classList.remove("is-open");
     menuToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
+
+function positionContactMenu(trigger) {
+  if (window.innerWidth <= 640) return; // bottom sheet on mobile
+  const r = trigger.getBoundingClientRect();
+  const w = contactMenu.offsetWidth;
+  let left = r.left + r.width / 2 - w / 2;
+  left = Math.max(16, Math.min(left, window.innerWidth - w - 16));
+  contactMenu.style.top = r.bottom + 10 + "px";
+  contactMenu.style.left = left + "px";
+}
+
+function openContactMenu(trigger) {
+  activeTrigger = trigger;
+  nav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  contactBackdrop.hidden = false;
+  contactMenu.hidden = false;
+  positionContactMenu(trigger);
+  contactTriggers.forEach((t) => t.setAttribute("aria-expanded", String(t === trigger)));
+  contactMenu.querySelector(".contact-option").focus();
+}
+
+function closeContactMenu(returnFocus = true) {
+  if (contactMenu.hidden) return;
+  contactMenu.hidden = true;
+  contactBackdrop.hidden = true;
+  contactTriggers.forEach((t) => t.setAttribute("aria-expanded", "false"));
+  if (returnFocus && activeTrigger) activeTrigger.focus();
+  activeTrigger = null;
+}
+
+contactTriggers.forEach((trigger) => trigger.addEventListener("click", (event) => {
+  event.preventDefault();
+  contactMenu.hidden ? openContactMenu(trigger) : closeContactMenu();
+}));
+contactBackdrop.addEventListener("click", () => closeContactMenu(false));
+document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeContactMenu(); });
+contactMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => closeContactMenu(false)));
+window.addEventListener("scroll", () => { if (window.innerWidth > 640) closeContactMenu(false); }, { passive: true });
+window.addEventListener("resize", () => closeContactMenu(false));
+
+copyEmailBtn.addEventListener("click", async () => {
+  const dict = translations[html.lang] || translations.en;
+  try {
+    await navigator.clipboard.writeText("karbanbaroudia@gmail.com");
+    copyEmailBtn.textContent = dict.contactCopied;
+    clearTimeout(copyTimer);
+    copyTimer = setTimeout(() => { copyEmailBtn.textContent = dict.contactCopy; }, 1800);
+  } catch (_) {
+    window.location.href = "mailto:karbanbaroudia@gmail.com";
   }
 });

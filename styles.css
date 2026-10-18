@@ -35,3 +35,31 @@ html[dir="rtl"] .hero h1,html[dir="rtl"] .section-heading h2,html[dir="rtl"] .ap
 .project-metrics b{display:block;font-size:17px;color:#e9eef5}
 .project-metrics span{display:block;margin-top:3px;font:9px var(--mono);letter-spacing:1px;color:#a4b0bd;text-transform:uppercase}
 html[dir="rtl"] .project-metrics span{letter-spacing:0}
+
+/* Contact menu */
+.contact-backdrop{position:fixed;inset:0;z-index:59;background:transparent}
+.contact-menu{position:fixed;z-index:60;width:min(330px,calc(100vw - 32px));padding:10px;background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:0 24px 60px #000b;animation:contactIn .18s ease-out}
+.contact-menu[hidden],.contact-backdrop[hidden]{display:none}
+@keyframes contactIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.contact-menu-title{margin:4px 8px 10px;font:11px var(--mono);letter-spacing:1.6px;color:var(--subtle);text-transform:uppercase}
+html[dir="rtl"] .contact-menu-title{letter-spacing:0;font-family:var(--arabic)}
+.contact-option{display:flex;align-items:center;gap:12px;padding:11px 10px;border-radius:9px;color:var(--text);text-decoration:none;transition:background .15s}
+.contact-option:hover,.contact-option:focus-visible{background:var(--panel-hi);outline:none}
+.contact-option:focus-visible{box-shadow:0 0 0 2px var(--lime) inset}
+.co-icon{flex:none;width:36px;height:36px;display:grid;place-items:center;border:1px solid #2c3441;border-radius:9px;color:var(--lime);font:600 13px var(--sans)}
+.co-text{display:flex;flex-direction:column;gap:2px;min-width:0}
+.co-text b{font-size:14px;font-weight:600}
+.co-text small{font:12px var(--mono);color:var(--muted);overflow:hidden;text-overflow:ellipsis}
+.contact-menu-copy{width:100%;margin-top:6px;padding:10px;background:transparent;border:1px dashed #323a47;border-radius:9px;color:var(--muted);font:inherit;font-size:13px;cursor:pointer}
+.contact-menu-copy:hover,.contact-menu-copy:focus-visible{color:var(--text);border-color:var(--lime);outline:none}
+
+@media(max-width:640px){
+  .contact-backdrop{background:#000a;backdrop-filter:blur(2px)}
+  .contact-menu{left:12px!important;right:12px!important;top:auto!important;bottom:12px;width:auto;animation-name:contactUp}
+  @keyframes contactUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+}
+@media(prefers-reduced-motion:reduce){.contact-menu{animation:none}}
+
+
+.contact-alt{display:flex;gap:10px;flex-wrap:wrap}
+.contact-actions .contact-alt .button{min-width:0}
